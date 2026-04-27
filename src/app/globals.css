@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream-100 text-ink font-sans antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  /* Layout */
+  .container-content {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Typography */
+  .display-h1 {
+    @apply font-display text-5xl font-light leading-[1.1] tracking-tight text-ink md:text-6xl lg:text-7xl;
+  }
+  .display-h2 {
+    @apply font-display text-3xl font-light leading-tight text-ink md:text-4xl;
+  }
+  .display-h3 {
+    @apply font-display text-2xl font-light leading-snug text-ink;
+  }
+  .eyebrow {
+    @apply font-sans text-xs uppercase tracking-[0.15em] text-sage-700;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-sage-700 px-6 py-2.5 font-sans text-sm uppercase tracking-wider text-cream-50 transition-colors hover:bg-sage-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage-600 focus-visible:ring-offset-2;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-ink/20 px-6 py-2.5 font-sans text-sm uppercase tracking-wider text-ink transition-colors hover:bg-cream-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage-600 focus-visible:ring-offset-2;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-4 py-2 font-sans text-sm transition-colors hover:bg-cream-200 focus-visible:outline-none;
+  }
+
+  /* Cards */
+  .float-card {
+    @apply rounded-2xl border border-cream-200 bg-white shadow-soft transition-shadow hover:shadow-float;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out both;
+  }
+  .animate-fade-up {
+    animation: fadeUp 0.8s ease-out both;
+  }
+  .animate-scale-in {
+    animation: scaleIn 0.4s ease-out both;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
