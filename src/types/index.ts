@@ -24,7 +24,7 @@ export interface User {
   updated_at: string;
 }
 
-export type PublicUser = Pick<User, "id" | "display_name" | "avatar_url" | "role">;
+export type PublicUser = Pick<User, "id" | "email" | "display_name" | "avatar_url" | "role">;
 
 export interface Service {
   id: string;
