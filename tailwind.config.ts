@@ -5,7 +5,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Brand palette: warm white, sage green, soft tan
+        // Brand palette: warm cream, lavender/purple, soft tan
         cream: {
           50: "#FBF8F3",
           100: "#F5F0E8",
@@ -13,15 +13,15 @@ const config: Config = {
           300: "#E0D4BD",
         },
         sage: {
-          50: "#F1F4F0",
-          100: "#DDE5DA",
-          200: "#B8C7B2",
-          300: "#94A98C",
-          400: "#7D9B76",
-          500: "#5F7E58",
-          600: "#4A6444",
-          700: "#3A4F35",
-          800: "#2D3D29",
+          50: "#F5F2F9",
+          100: "#E8E1F4",
+          200: "#D0C5E8",
+          300: "#B5A7D8",
+          400: "#9B8CC8",
+          500: "#8273B8",
+          600: "#6B5EA5",
+          700: "#574D8A",
+          800: "#443C6E",
         },
         tan: {
           100: "#EFE3CE",
@@ -67,9 +67,9 @@ const config: Config = {
         },
       },
       boxShadow: {
-        soft: "0 4px 24px -8px rgba(60, 50, 35, 0.08)",
-        float: "0 12px 40px -12px rgba(60, 50, 35, 0.18)",
-        floathover: "0 20px 50px -12px rgba(60, 50, 35, 0.25)",
+        soft: "0 4px 24px -8px rgba(60, 50, 80, 0.08)",
+        float: "0 12px 40px -12px rgba(60, 50, 80, 0.18)",
+        floathover: "0 20px 50px -12px rgba(60, 50, 80, 0.25)",
       },
     },
   },

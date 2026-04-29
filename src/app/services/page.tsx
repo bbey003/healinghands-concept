@@ -7,7 +7,7 @@ import { formatPrice } from "@/lib/utils";
 export const metadata: Metadata = { title: "Services" };
 
 export default async function ServicesPage(): Promise<JSX.Element> {
-  const services = servicesRepo.listActive();
+  const services = servicesRepo.listActive().filter((s) => s.category !== "ceu");
 
   return (
     <>
