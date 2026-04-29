@@ -19,7 +19,7 @@ function ensureSeeded(): void {
 }
 
 function toPublic(u: User): PublicUser {
-  return { id: u.id, display_name: u.display_name, avatar_url: u.avatar_url, role: u.role };
+  return { id: u.id, email: u.email, display_name: u.display_name, avatar_url: u.avatar_url, role: u.role };
 }
 
 export const usersRepo = {
