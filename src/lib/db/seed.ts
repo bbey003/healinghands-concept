@@ -302,9 +302,9 @@ export function seedAll(): void {
       compare_at_cents: null,
       category: "essential-oil",
       image_url:
-        "https://images.unsplash.com/photo-1608181831718-c9ffd8728c4d?w=800&h=800&fit=crop",
+        "https://images.unsplash.com/photo-1620916297397-a4a5402a3c6c?w=800&h=800&fit=crop",
       gallery: [
-        "https://images.unsplash.com/photo-1608181831718-c9ffd8728c4d?w=800&h=800&fit=crop",
+        "https://images.unsplash.com/photo-1620916297397-a4a5402a3c6c?w=800&h=800&fit=crop",
       ],
       stock: 20,
       variants: [
@@ -325,9 +325,9 @@ export function seedAll(): void {
       compare_at_cents: null,
       category: "candle",
       image_url:
-        "https://images.unsplash.com/photo-1602874801007-aa8c8b5beecf?w=800&h=800&fit=crop",
+        "https://images.unsplash.com/photo-1603006905003-be475563bc59?w=800&h=800&fit=crop",
       gallery: [
-        "https://images.unsplash.com/photo-1602874801007-aa8c8b5beecf?w=800&h=800&fit=crop",
+        "https://images.unsplash.com/photo-1603006905003-be475563bc59?w=800&h=800&fit=crop",
       ],
       stock: 15,
       variants: [],
