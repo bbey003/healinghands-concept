@@ -38,8 +38,12 @@ export default function ContactPage(): JSX.Element {
       <div className="grid gap-12 lg:grid-cols-2">
         <div>
           <p className="eyebrow">Get in touch</p>
-          <h1 className="display-h1 mt-4">Contact us</h1>
-          <div className="mt-8 space-y-4 text-ink-light">
+          <h1 className="display-h1 mt-4">We&apos;d love to hear from you.</h1>
+          <p className="mt-4 max-w-sm text-lg text-ink-light">
+            Questions about a treatment, a gift for someone you love, or just not sure
+            where to start — reach out and we&apos;ll get back to you within one business day.
+          </p>
+          <div className="mt-8 space-y-2 text-ink-light">
             <p>327 Main Street · Middletown, DE 19709</p>
             <p>(302) 555-0139</p>
             <p>Tuesday – Saturday · 9 am – 6 pm</p>
@@ -49,8 +53,8 @@ export default function ContactPage(): JSX.Element {
         <div className="float-card p-8">
           {sent ? (
             <div className="py-8 text-center">
-              <p className="font-display text-2xl text-sage-700">Message sent.</p>
-              <p className="mt-2 text-ink-light">We'll be in touch within one business day.</p>
+              <p className="font-display text-2xl text-sage-700">Thank you.</p>
+              <p className="mt-2 text-ink-light">We&apos;ll be in touch within one business day.</p>
             </div>
           ) : (
             <form onSubmit={(e) => void handleSubmit(e)} className="space-y-5">

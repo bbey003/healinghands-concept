@@ -4,7 +4,7 @@ import Link from "next/link";
 import { servicesRepo, usersRepo } from "@/lib/db";
 import { formatPrice } from "@/lib/utils";
 
-export const metadata: Metadata = { title: "Services" };
+export const metadata: Metadata = { title: "Services — Healing Hands Spa" };
 
 export default async function ServicesPage(): Promise<JSX.Element> {
   const services = servicesRepo.listActive().filter((s) => s.category !== "ceu");
@@ -15,8 +15,8 @@ export default async function ServicesPage(): Promise<JSX.Element> {
         <p className="eyebrow">What we offer</p>
         <h1 className="display-h1 mt-4">Services</h1>
         <p className="mt-4 max-w-xl text-lg text-ink-light">
-          A short list, done well. Every session is tailored, unhurried, and performed by a
-          licensed therapist.
+          Every treatment is tailored to you — unhurried, attentive, and performed by a licensed
+          therapist who takes the time to listen before they begin.
         </p>
       </section>
 

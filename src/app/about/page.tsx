@@ -3,7 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { usersRepo } from "@/lib/db";
 
-export const metadata: Metadata = { title: "About" };
+export const metadata: Metadata = { title: "About — Healing Hands Spa" };
+
+const SPECIALTIES: Record<string, string> = {
+  "adele@healinghandsspa.com": "Founder & Lead Therapist",
+  "marcus@healinghandsspa.com": "Swedish & Aromatherapy",
+  "jasmine@healinghandsspa.com": "Prenatal Specialist",
+  "rosa@healinghandsspa.com": "Hot Stone Therapy",
+  "liam@healinghandsspa.com": "Deep Tissue & Sports",
+};
 
 export default async function AboutPage(): Promise<JSX.Element> {
   const team = usersRepo.list().filter((u) => u.role === "provider" || u.role === "admin");
@@ -18,14 +26,15 @@ export default async function AboutPage(): Promise<JSX.Element> {
           </div>
           <div className="lg:col-span-6 lg:col-start-7">
             <p className="text-lg leading-relaxed text-ink-light">
-              Healing Hands Spa was founded by Adele Thaxton in 2013 — a single massage table in a
-              sun-warmed back room in Middletown, Delaware. Twelve years on, we are a team of five
-              licensed therapists, a house line of botanicals called <em>Essentially Yours</em>, and
-              a continuing-education program for fellow practitioners.
+              In 2013, Adele Thaxton set up a single massage table in a sun-warmed back room on
+              Main Street. She had no receptionist, no waiting area, and a strict rule: never
+              book back-to-back sessions. Twelve years on, the rule still holds.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-ink-light">
-              We believe rest is the work, not the reward. Every session is unhurried, every blend
-              is hand-poured, every client is met where they are.
+              We are now five therapists, a house line of botanicals called{" "}
+              <em>Essentially Yours</em>, and a continuing-education program that draws practitioners
+              from across the state. What hasn&apos;t changed: every appointment gets the full hour.
+              No rushing. No upselling. Just the work.
             </p>
           </div>
         </div>
@@ -48,7 +57,9 @@ export default async function AboutPage(): Promise<JSX.Element> {
                   />
                 </div>
                 <p className="mt-4 font-display text-xl">{member.display_name}</p>
-                <p className="mt-1 text-sm capitalize text-ink-light">{member.role}</p>
+                <p className="mt-1 text-sm text-ink-light">
+                  {SPECIALTIES[member.email] ?? "Licensed Massage Therapist"}
+                </p>
               </div>
             ))}
           </div>
